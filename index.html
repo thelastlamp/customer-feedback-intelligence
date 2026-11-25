@@ -1,21 +1,483 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Customer Feedback Intelligence</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <main>
-        <h1>Customer Feedback Intelligence</h1>
-        <p>Turn customer feedback into meaningful business decisions.</p>
-        <button id="testButton">Test Application</button>
-        <p id="result"></p>
-    </main>
+    <!-- MAIN APPLICATION LAYOUT -->
+    <div class="app-container">
+
+        <!-- SIDEBAR NAVIGATION -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">C</div>
+                <div>
+                    <h2>Customer Insights</h2>
+                    <span>Feedback Intelligence</span>
+                </div>
+            </div>
+
+            <div class="sidebar-menu">
+                <p class="menu-label">WORKSPACE</p>
+
+                <a href="#overview" class="nav-link active">
+                    <span>◫</span> Overview
+                </a>
+
+                <a href="#sentiment" class="nav-link">
+                    <span>◉</span> Sentiment Analysis
+                </a>
+
+                <a href="#themes" class="nav-link">
+                    <span>▦</span> Customer Themes
+                </a>
+
+                <a href="#reviews" class="nav-link">
+                    <span>▤</span> Review Evidence
+                </a>
+
+                <a href="#recommendations" class="nav-link">
+                    <span>✧</span> Recommendations
+                </a>
+            </div>
+
+            <div class="sidebar-footer">
+                <p>Customer Feedback Intelligence</p>
+                <span>Early development version</span>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN DASHBOARD CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP HEADER -->
+            <header class="topbar">
+
+                <div>
+                    <p class="breadcrumb">Workspace / Overview</p>
+                    <h1>Business Overview</h1>
+                </div>
+
+                <div class="header-actions">
+                    <span class="demo-label">DEMO DATA</span>
+
+                    <div class="language-selector">
+                        <span>EN</span>
+                        <span>⌄</span>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD INTRODUCTION -->
+            <section class="welcome-section" id="overview">
+
+                <div>
+                    <h2>Understand your customers better.</h2>
+
+                    <p>
+                        Turn customer feedback into meaningful
+                        business insights and practical decisions.
+                    </p>
+                </div>
+
+                <button class="secondary-button" type="button">
+                    + New Analysis
+                </button>
+
+            </section>
+
+
+            <!-- SUMMARY CARDS -->
+            <section class="summary-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>At a glance</h2>
+                        <p>A quick overview of customer feedback.</p>
+                    </div>
+                </div>
+
+                <div class="summary-grid">
+
+                    <article class="summary-card">
+                        <p class="card-label">Total Reviews</p>
+                        <h3>250</h3>
+                        <span class="card-description">
+                            Reviews analysed
+                        </span>
+                    </article>
+
+                    <article class="summary-card">
+                        <p class="card-label">Positive Reviews</p>
+                        <h3 class="positive-text">72%</h3>
+                        <span class="card-description">
+                            180 reviews
+                        </span>
+                    </article>
+
+                    <article class="summary-card">
+                        <p class="card-label">Negative Reviews</p>
+                        <h3 class="negative-text">18%</h3>
+                        <span class="card-description">
+                            45 reviews
+                        </span>
+                    </article>
+
+                    <article class="summary-card">
+                        <p class="card-label">Neutral & Mixed</p>
+                        <h3>10%</h3>
+                        <span class="card-description">
+                            25 reviews
+                        </span>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- SENTIMENT ANALYSIS -->
+            <section class="dashboard-section" id="sentiment">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Sentiment Analysis</h2>
+                        <p>How customers feel about the business.</p>
+                    </div>
+                </div>
+
+                <div class="content-card sentiment-card">
+
+                    <div class="sentiment-overview">
+
+                        <div class="sentiment-item">
+                            <span class="sentiment-dot positive-dot"></span>
+                            <div>
+                                <h3>72%</h3>
+                                <p>Positive</p>
+                            </div>
+                        </div>
+
+                        <div class="sentiment-item">
+                            <span class="sentiment-dot negative-dot"></span>
+                            <div>
+                                <h3>18%</h3>
+                                <p>Negative</p>
+                            </div>
+                        </div>
+
+                        <div class="sentiment-item">
+                            <span class="sentiment-dot neutral-dot"></span>
+                            <div>
+                                <h3>6%</h3>
+                                <p>Neutral</p>
+                            </div>
+                        </div>
+
+                        <div class="sentiment-item">
+                            <span class="sentiment-dot mixed-dot"></span>
+                            <div>
+                                <h3>4%</h3>
+                                <p>Mixed</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+<div class="sentiment-chart">
+
+    <div class="chart-heading">
+        <h3>Customer Sentiment Distribution</h3>
+        <span>250 reviews analysed</span>
+    </div>
+
+    <div class="stacked-bar" role="img"
+         aria-label="72 percent positive, 18 percent negative, 6 percent neutral and 4 percent mixed reviews">
+
+        <div class="bar-positive" style="width: 72%"></div>
+        <div class="bar-negative" style="width: 18%"></div>
+        <div class="bar-neutral" style="width: 6%"></div>
+        <div class="bar-mixed" style="width: 4%"></div>
+
+    </div>
+
+    <div class="chart-note">
+        <span>Distribution of classified customer reviews</span>
+    </div>
+
+</div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- CUSTOMER THEMES -->
+            <section class="dashboard-section" id="themes">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>What customers are talking about</h2>
+                        <p>Common themes identified across reviews.</p>
+                    </div>
+                </div>
+
+                <div class="themes-grid">
+
+                    <article class="content-card theme-card">
+
+                        <div class="theme-heading">
+                            <h3>What customers appreciate</h3>
+                            <span class="theme-indicator positive-dot"></span>
+                        </div>
+
+                        <div class="theme-item">
+                            <div>
+                                <strong>Taste</strong>
+                                <span>Positive mentions</span>
+                            </div>
+                            <span class="theme-count">85</span>
+                        </div>
+
+                        <div class="theme-item">
+                            <div>
+                                <strong>Freshness</strong>
+                                <span>Positive mentions</span>
+                            </div>
+                            <span class="theme-count">62</span>
+                        </div>
+
+                        <div class="theme-item">
+                            <div>
+                                <strong>Packaging</strong>
+                                <span>Positive mentions</span>
+                            </div>
+                            <span class="theme-count">38</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="content-card theme-card">
+
+                        <div class="theme-heading">
+                            <h3>Areas needing attention</h3>
+                            <span class="theme-indicator negative-dot"></span>
+                        </div>
+
+                        <div class="theme-item">
+                            <div>
+                                <strong>Delivery</strong>
+                                <span>Negative mentions</span>
+                            </div>
+                            <span class="theme-count">28</span>
+                        </div>
+
+                        <div class="theme-item">
+                            <div>
+                                <strong>Customer Support</strong>
+                                <span>Negative mentions</span>
+                            </div>
+                            <span class="theme-count">12</span>
+                        </div>
+
+                        <div class="theme-item">
+                            <div>
+                                <strong>Pricing</strong>
+                                <span>Negative mentions</span>
+                            </div>
+                            <span class="theme-count">8</span>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- CUSTOMER REVIEW EVIDENCE -->
+            <section class="dashboard-section" id="reviews">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Customer Review Evidence</h2>
+                        <p>Original feedback behind the findings.</p>
+                    </div>
+                </div>
+
+                <div class="content-card review-card">
+
+                    <article class="review-item">
+
+                        <div class="review-meta">
+                            <span class="review-category positive-badge">
+                                Positive
+                            </span>
+                            <span class="review-theme">Taste</span>
+                        </div>
+
+                        <p>
+                            "The sweets were delicious and tasted
+                            incredibly fresh. Will definitely order again!"
+                        </p>
+
+                    </article>
+
+                    <article class="review-item">
+
+                        <div class="review-meta">
+                            <span class="review-category negative-badge">
+                                Negative
+                            </span>
+                            <span class="review-theme">Delivery</span>
+                        </div>
+
+                        <p>
+                            "The product was good, but my order arrived
+                            much later than expected."
+                        </p>
+
+                    </article>
+
+                    <article class="review-item">
+
+                        <div class="review-meta">
+                            <span class="review-category positive-badge">
+                                Positive
+                            </span>
+                            <span class="review-theme">Packaging</span>
+                        </div>
+
+                        <p>
+                            "Loved the packaging. Everything was neatly
+                            packed and arrived in good condition."
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- BUSINESS SUMMARY -->
+            <section class="dashboard-section" id="business-summary">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Your Business at a Glance</h2>
+                        <p>The bigger picture behind customer feedback.</p>
+                    </div>
+                </div>
+
+                <div class="content-card business-summary-card">
+
+                    <div class="summary-insight">
+                        <h3>What are customers telling you?</h3>
+                        <p>
+                            Customers generally appreciate the taste,
+                            freshness and packaging of the products.
+                        </p>
+                    </div>
+
+                    <div class="summary-insight">
+                        <h3>What should you pay attention to?</h3>
+                        <p>
+                            Delivery-related complaints appear to be
+                            an area that deserves further attention.
+                        </p>
+                    </div>
+
+                    <div class="summary-insight">
+                        <h3>What should you do next?</h3>
+                        <p>
+                            Review delivery timelines and identify
+                            where delays are occurring.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECOMMENDATIONS -->
+            <section class="dashboard-section" id="recommendations">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Recommended Next Steps</h2>
+                        <p>Practical actions based on customer feedback.</p>
+                    </div>
+                </div>
+
+                <div class="content-card recommendation-card">
+
+                    <article class="recommendation-item">
+                        <span class="priority-label high-priority">
+                            HIGH PRIORITY
+                        </span>
+
+                        <h3>Review the delivery process</h3>
+
+                        <p>
+                            Investigate the reasons behind delivery
+                            complaints and check whether estimated
+                            delivery timelines are being met.
+                        </p>
+                    </article>
+
+                    <article class="recommendation-item">
+                        <span class="priority-label medium-priority">
+                            MEDIUM PRIORITY
+                        </span>
+
+                        <h3>Maintain product quality</h3>
+
+                        <p>
+                            Continue monitoring product freshness
+                            and taste, which receive positive feedback.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="dashboard-footer">
+                <p>
+                    Customer Feedback Intelligence
+                    <span>•</span>
+                    Demonstration dashboard
+                </p>
+
+                <p>Built to turn feedback into better decisions.</p>
+            </footer>
+
+        </main>
+
+    </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
