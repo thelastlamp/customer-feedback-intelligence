@@ -888,3 +888,448 @@ a {
         flex-direction: column;
     }
 }
+
+
+
+
+/* =================================
+   CUSTOMER FEEDBACK INTELLIGENCE
+   CENTRED INPUT SCREEN
+================================= */
+
+/* OUTER BACKGROUND */
+
+.input-screen {
+    min-height: 100vh;
+    width: 100%;
+    padding: 38px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(0, 157, 218, 0.22), transparent 35%),
+        radial-gradient(ellipse at 85% 75%, rgba(15, 157, 138, 0.15), transparent 38%),
+        linear-gradient(135deg, #06172F, #0B2547 55%, #061A35);
+}
+
+/* SUBTLE BACKGROUND PARTICLES */
+
+.input-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle, rgba(94, 234, 212, 0.45) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(59, 130, 246, 0.4) 1px, transparent 1.5px);
+    background-size: 55px 55px, 83px 83px;
+    background-position: 0 0, 25px 30px;
+    opacity: 0.35;
+}
+
+/* CENTRAL APPLICATION PANEL */
+
+.input-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    width: 100%;
+    max-width: 1260px;
+    min-height: 600px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 22px;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+}
+
+/* LEFT BRAND PANEL */
+
+.brand-panel {
+    background: linear-gradient(145deg, #10213D, #0A1B35);
+    color: #FFFFFF;
+    padding: 42px 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle decorative glow */
+
+.brand-panel::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    right: -180px;
+    bottom: -170px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.3), transparent 70%);
+    pointer-events: none;
+}
+
+.brand-panel > * {
+    position: relative;
+    z-index: 1;
+}
+
+.input-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.input-brand .brand-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #2563EB, #0F9D8A);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* BRAND INTRODUCTION */
+
+.brand-copy {
+    margin-top: 65px;
+    max-width: 490px;
+}
+
+.brand-copy .input-eyebrow {
+    color: #5EEAD4;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.brand-copy h1 {
+    color: #FFFFFF;
+    font-size: 39px;
+    line-height: 1.2;
+    margin: 18px 0;
+}
+
+.brand-copy h1 span {
+    color: #5EEAD4;
+}
+
+.brand-copy p {
+    color: #CBD5E1;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 390px;
+}
+
+/* THREE PRODUCT STEPS */
+
+.brand-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 35px;
+}
+
+.brand-step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #E2E8F0;
+    font-size: 13px;
+}
+
+.step-number {
+    color: #5EEAD4;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ABSTRACT INSIGHT MOTIF */
+
+.insight-motif {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: auto;
+    padding: 17px 20px;
+    max-width: 390px;
+    background: rgba(59, 130, 246, 0.10);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 14px;
+}
+
+.motif-reviews,
+.motif-patterns {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.motif-reviews span {
+    height: 6px;
+    width: 95px;
+    border-radius: 10px;
+    background: #64748B;
+}
+
+.motif-reviews span:nth-child(2),
+.motif-reviews span:nth-child(5) {
+    width: 70px;
+}
+
+.motif-reviews span:nth-child(3) {
+    width: 85px;
+    background: #0F9D8A;
+}
+
+.motif-reviews span:nth-child(4) {
+    width: 58px;
+    background: #5EEAD4;
+}
+
+.motif-connectors {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.motif-connectors span {
+    width: 25px;
+    height: 1px;
+    background: #5EEAD4;
+    opacity: 0.7;
+}
+
+.motif-patterns span {
+    height: 6px;
+    width: 58px;
+    border-radius: 10px;
+    background: #0F9D8A;
+}
+
+.motif-patterns span:nth-child(2) {
+    width: 43px;
+}
+
+.motif-patterns span:nth-child(3) {
+    width: 52px;
+}
+
+/* RIGHT INPUT WORKSPACE */
+
+.input-workspace {
+    padding: 35px 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    background: #F2F6FC;
+}
+
+.workspace-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.workspace-label {
+    display: none;
+}
+
+.interface-language {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.interface-language label {
+    color: #64748B;
+    font-size: 12px;
+}
+
+.interface-language select {
+    border: 1px solid #E2E8F0;
+    border-radius: 7px;
+    padding: 9px 12px;
+    background: #FFFFFF;
+    color: #172033;
+    font-size: 13px;
+}
+
+/* REVIEW INPUT CARD */
+
+.review-input-card {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+.card-eyebrow {
+    color: #0F9D8A;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.card-heading h2 {
+    color: #10213D;
+    font-size: 27px;
+    line-height: 1.35;
+    margin: 12px 0 9px;
+}
+
+.card-heading p {
+    color: #64748B;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.review-input-card > label {
+    display: block;
+    color: #172033;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* REVIEW TEXTAREA */
+
+.review-input-card textarea {
+    display: block;
+    width: 100%;
+    min-height: 145px;
+    padding: 15px;
+    border: 1px solid #CBD5E1;
+    border-radius: 9px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #172033;
+    outline: none;
+    background: #F8FBFD;
+}
+
+.review-input-card textarea:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.input-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 10px;
+    color: #64748B;
+    font-size: 12px;
+}
+
+.input-error {
+    color: #DC2626;
+    font-size: 13px;
+    margin: 10px 0;
+    min-height: 16px;
+}
+
+/* REPORT LANGUAGE AND ACTION */
+
+.analysis-controls {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #E2E8F0;
+}
+
+.report-language {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.report-language label {
+    color: #64748B;
+    font-size: 12px;
+}
+
+.report-language select {
+    min-width: 145px;
+    padding: 11px 12px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #172033;
+    font-size: 13px;
+}
+
+#analyseButton {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 9px;
+    background: #2563EB;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#analyseButton:hover {
+    background: #1D4ED8;
+    transform: translateY(-1px);
+}
+
+/* FOOTER */
+
+.input-footer {
+    text-align: center;
+    color: #94A3B8;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+/* SCREEN VISIBILITY */
+
+.input-screen {
+    display: flex;
+}
+
+.dashboard-screen {
+    display: none;
+}
+
+/* BACK TO REVIEWS BUTTON */
+
+.back-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 12px;
+    color: #2563EB;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.back-button:hover {
+    color: #0F9D8A;
+}

@@ -15,7 +15,185 @@
 
     <!-- MAIN APPLICATION LAYOUT -->
     <div class="app-container">
+        
+<!-- REVIEW INPUT SCREEN -->
+<section class="input-screen" id="inputScreen">
 
+    <div class="input-layout">
+
+        <!-- LEFT BRAND PANEL -->
+        <aside class="brand-panel">
+
+            <div class="input-brand">
+                <div class="brand-icon">C</div>
+                <span>Customer Feedback Intelligence</span>
+            </div>
+
+            <div class="brand-copy">
+
+                <span class="input-eyebrow">
+                    CUSTOMER INSIGHTS WORKSPACE
+                </span>
+
+                <h1>
+                    Many voices.<br>
+                    <span>One clear picture.</span>
+                </h1>
+
+                <p>
+                    Understand what your customers appreciate,
+                    what frustrates them, and where your business
+                    can improve.
+                </p>
+
+            </div>
+
+            <div class="brand-steps">
+
+                <div class="brand-step">
+                    <span class="step-number">01</span>
+                    <span>Listen to your customers</span>
+                </div>
+
+                <div class="brand-step">
+                    <span class="step-number">02</span>
+                    <span>Discover meaningful patterns</span>
+                </div>
+
+                <div class="brand-step">
+                    <span class="step-number">03</span>
+                    <span>Make informed decisions</span>
+                </div>
+
+            </div>
+
+            <!-- ABSTRACT INSIGHT MOTIF -->
+            <div class="insight-motif" aria-hidden="true">
+
+                <div class="motif-reviews">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="motif-connectors">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="motif-patterns">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT INPUT WORKSPACE -->
+        <main class="input-workspace">
+
+            <header class="workspace-header">
+
+                <span class="workspace-label">
+                    YOUR FEEDBACK WORKSPACE
+                </span>
+
+                <div class="interface-language">
+                    <label for="interfaceLanguage">
+                        Interface
+                    </label>
+
+                    <select id="interfaceLanguage">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                    </select>
+                </div>
+
+            </header>
+
+
+            <!-- REVIEW INPUT CARD -->
+            <section class="review-input-card">
+
+                <div class="card-heading">
+
+                    <span class="card-eyebrow">
+                        START A NEW ANALYSIS
+                    </span>
+
+                    <h2>Bring your customer reviews together.</h2>
+
+                    <p>
+                        Paste your reviews below. Enter one review
+                        per line to get started.
+                    </p>
+
+                </div>
+
+
+                <label for="reviewInput">
+                    Customer reviews
+                </label>
+
+                <textarea
+                    id="reviewInput"
+                    placeholder="Example: The product was excellent and delivery was quick.&#10;The packaging was good, but my order arrived late."
+                    rows="5"
+                ></textarea>
+
+
+                <div class="input-bottom">
+                    <span id="reviewCount">0 reviews entered</span>
+                    <span>One review per line</span>
+                </div>
+
+
+                <p id="inputError"
+                   class="input-error"
+                   aria-live="polite"></p>
+
+
+                <div class="analysis-controls">
+
+                    <div class="report-language">
+                        <label for="reportLanguage">
+                            Report language
+                        </label>
+
+                        <select id="reportLanguage">
+                            <option value="en">English</option>
+                            <option value="hi">हिन्दी</option>
+                        </select>
+                    </div>
+
+                    <button id="analyseButton" type="button">
+                        Analyse Reviews →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <p class="input-footer">
+                Your customer feedback deserves a closer look.
+            </p>
+
+        </main>
+
+    </div>
+
+</section>
+<!-- END REVIEW INPUT SCREEN -->
+
+
+<div class="dashboard-screen" id="dashboardScreen">
         <!-- SIDEBAR NAVIGATION -->
         <aside class="sidebar">
 
@@ -65,6 +243,10 @@
             <!-- TOP HEADER -->
             <header class="topbar">
 
+                <button id="backToReviews" class="back-button" type="button">
+                    ← Back to Reviews
+                </button>
+                
                 <div>
                     <p class="breadcrumb">Workspace / Overview</p>
                     <h1>Business Overview</h1>
@@ -324,53 +506,13 @@
 
                 <div class="content-card review-card">
 
-                    <article class="review-item">
+                    <div id="reviewEvidenceList">
 
-                        <div class="review-meta">
-                            <span class="review-category positive-badge">
-                                Positive
-                            </span>
-                            <span class="review-theme">Taste</span>
-                        </div>
-
-                        <p>
-                            "The sweets were delicious and tasted
-                            incredibly fresh. Will definitely order again!"
+                       <p class="empty-reviews">
+                           Your submitted reviews will appear here.
                         </p>
 
-                    </article>
-
-                    <article class="review-item">
-
-                        <div class="review-meta">
-                            <span class="review-category negative-badge">
-                                Negative
-                            </span>
-                            <span class="review-theme">Delivery</span>
-                        </div>
-
-                        <p>
-                            "The product was good, but my order arrived
-                            much later than expected."
-                        </p>
-
-                    </article>
-
-                    <article class="review-item">
-
-                        <div class="review-meta">
-                            <span class="review-category positive-badge">
-                                Positive
-                            </span>
-                            <span class="review-theme">Packaging</span>
-                        </div>
-
-                        <p>
-                            "Loved the packaging. Everything was neatly
-                            packed and arrived in good condition."
-                        </p>
-
-                    </article>
+                    </div>
 
                 </div>
 
@@ -474,6 +616,8 @@
             </footer>
 
         </main>
+
+    </div>
 
     </div>
 
